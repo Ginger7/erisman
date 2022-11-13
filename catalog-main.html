@@ -1,0 +1,1514 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>default title</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta content="telephone=no" name="format-detection">
+        <!-- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers -->
+        <meta name="HandheldFriendly" content="true">
+
+
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="300" />
+        <meta property="twitter:description" content="" />
+        <link rel="image_src" href="" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=492452f1-773d-4ce3-a1ee-1f9068635616&lang=ru_RU" type="text/javascript"></script>
+        <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+
+
+
+        <!--[if (gt IE 9)|!(IE)]><!-->
+        <link href="static/css/main.min.css" rel="stylesheet" type="text/css">
+        <!--<![endif]-->
+    </head>
+
+    <body class="page">
+
+
+        <div class="page__wrapper">
+            <header>
+                <div class="container-fluid">
+                    <div class="header">
+                        <a href="/" class="header-logo">
+                            <img src="static/img/general/logo.png">
+                        </a>
+                        <a class="header-nav collapsed" data-toggle="collapse" href="#collapseHeader" role="button" aria-expanded="false" aria-controls="collapseHeader">
+                            <span></span>
+                        </a>
+                        <ul class="header-menu d-none d-lg-flex">
+                            <li class="header-item">
+                                <a href="catalog.html" class="header-link">Каталог</a>
+                            </li>
+                            <li class="header-item">
+                                <a href="#" class="header-link">Акции</a>
+                            </li>
+                            <li class="header-item">
+                                <a href="#" class="header-link">Распродажа</a>
+                            </li>
+                        </ul>
+                        <form id="flexInput" class="input-group search d-md-flex">
+                            <input type="text" id="catalogSearch" class="form-control" placeholder="Поиск по каталогу" aria-describedby="button-addon1">
+                            <div class="input-group-append">
+                                <button class="btn btn-search" type="submit" id="button-addon1"></button>
+                            </div>
+                        </form>
+                        <!-- <a class="header-location d-lg-flex d-none" data-toggle="modal" data-target="#modal-city" href="#modal-city">
+                    <span id="location"></span>
+                </a> -->
+                        <!-- <a class="header-location d-lg-flex d-none" data-toggle="modal" data-target="#modal-add-count-cart" href="#modal-add-count-cart">
+                    modal-add-count-cart
+                </a> -->
+                        <a href="cart.html" class="btn-icon btn-heart mr-0 ml-auto d-none d-md-block"><span>99</span></a>
+                        <a href="comparison.html" class="btn-icon btn-b-filter d-none d-md-block"></a>
+                        <a href="cart.html" class="btn-icon btn-cart d-none d-md-block"><span>15</span></a>
+                        <a data-toggle="modal" data-target="#modal-login" href="#modal-login" class="btn-icon btn-person d-none d-md-block"></a>
+                    </div>
+                    <div class="bottom-menu d-md-none">
+                        <a href="cart.html" class="btn-icon btn-heart   "><span>99</span></a>
+                        <a href="comparison.html" class="btn-icon btn-b-filter "></a>
+                        <a href="cart.html" class="btn-icon btn-cart"><span>15</span></a>
+                        <a data-toggle="modal" data-target="#modal-login" href="#modal-login" class="btn-icon btn-person"></a>
+                    </div>
+                </div>
+                <div class="collapse" id="collapseHeader">
+                    <div class="collapse__header">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-5 d-lg-none align-self-center d-flex align-items-center justify-content-between mb-4">
+                                    <a class="header-location ml-0 mr-2" data-toggle="modal" data-target="#modal-city" href="#modal-city">
+                                        <span id="location-mb"></span>
+                                    </a>
+                                    <a href="cart.html" class="btn-icon btn-heart d-xs-none ml-auto mr-2"><span>99</span></a>
+                                    <a href="comparison.html" class="btn-icon btn-b-filter d-xs-none ml-2 mr-0"></a>
+                                </div>
+                                <div class="col-sm-7 d-lg-none">
+                                    <form class="input-group search mx-0 mb-4">
+                                        <input type="text" class="form-control" placeholder="Поиск по каталогу" aria-describedby="button-addon3">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-search" type="submit" id="button-addon3"></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-lg-3 col-md-4 col-sm-5">
+                                    <h4 class="mb-3">Каталог</h4>
+                                    <ul class="menu">
+                                        <li><a href="#" class="menu__link">Подбор обоев</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Все коллекции</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Новинки</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Типы обоев</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Интерьерные решения</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Виртуальная комната</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-sm-7">
+                                    <h4 class="mb-3">Покупателю</h4>
+                                    <ul class="menu">
+                                        <li><a href="#" class="menu__link">Оплата</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Доставка</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Возврат</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Фирменные магазины</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Сертификаты</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Советы по поклейке обоев</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Маркировка обоев и ее значение</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Расчет необходимого количества рулонов</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-sm-5">
+                                    <h4 class="mb-3">Компания</h4>
+                                    <ul class="menu">
+                                        <li><a href="#" class="menu__link">О компании</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">История Erismann</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">События</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Вакансии</a>
+                                        </li>
+                                        <li><a href="contacts.html" class="menu__link">Контакты</a>
+                                        </li>
+                                        <li><a href="#" class="menu__link">Обратная связь</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-2 text-lg-center col-md-12">
+                                    <a href="#"><h4>Акции</h4></a>
+                                </div>
+                                <div class="col-lg-2 text-lg-right menu__last col-md-12">
+                                    <a href="#"><h4>Распродажа</h4></a>
+                                    <div class="social">
+                                        <a href="#" class="btn-icon btn-facebook"></a>
+                                        <a href="#" class="btn-icon btn-instagram"></a>
+                                        <a href="#" class="btn-icon btn-vk"></a>
+                                        <a href="#" class="btn-icon btn-youtube"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <script>
+                window.onload = function () {
+                    jQuery('#location').text(ymaps.geolocation.city);
+                    jQuery('#location-mb').text(ymaps.geolocation.city);
+                };
+            </script>
+
+            <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="tab-content" id="pills-form">
+                            <form id="form-login" class="tab-pane fade show active" role="tabpanel">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Войти в личный кабинет</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="login-email" name="email" placeholder="Электронная почта">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="login-password" name="password" placeholder="Пароль">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <a data-toggle="tab" href="#form-reg" role="tab" id="form-reg_btn" aria-controls="form-reg" aria-selected="false" class="mb-3">Зарегистрироваться</a>
+                                    <button type="submit" class="btn ml-3 mb-3">Войти</button>
+                                </div>
+                            </form>
+                            <form id="form-reg" class="tab-pane fade" role="tabpanel">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Регистрация</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="reg-email" name="email" placeholder="Электронная почта">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="reg-password" name="password" placeholder="Пароль">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <a data-toggle="tab" href="#form-login" id="form-login_btn" role="tab" aria-controls="form-login" aria-selected="false" class="mb-3">Войти</a>
+                                    <button type="button" class="btn ml-3 mb-3">Зарегистрироваться</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="modal fade" id="modal-add-count-cart">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="tab-content" id="pills-form">
+                            <form id="form-login" class="tab-pane fade show active" role="tabpanel">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Добавить количество рулонов</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-auto pr-0">
+                                            <div class="form-group">
+                                                <div class="amount mr-0">
+                                                    <button class="minus">
+                                                        <img src="static/img/content/cart/minus.svg">
+                                                    </button>
+                                                    <input type="number" value="5">
+                                                    <button class="plus">
+                                                        <img src="static/img/content/cart/plus.svg">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto ">
+                                            <div class="form-group">
+                                                <button type="button" class="btn addCountCart" data-itemid="11498">Добавить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="modal-city" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="tab-content" id="pills-form">
+                            <form id="form-login" class="tab-pane fade show active" role="tabpanel">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Изменить город</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <select class="form-control" data-live-search="true" id="city">
+                                        <option>Москва</option>
+                                        <option>Коломна</option>
+                                        <option>Рязань</option>
+                                    </select>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn">Выбрать</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <nav class="breadcrumb">
+                    <ul class="breadcrumb__list">
+                        <li class="breadcrumb__item">
+                            <a href="#">Каталог</a>
+                        </li>
+                        <li class="breadcrumb__item">
+                            <a href="#">Коллекции</a>
+                        </li>
+                        <li class="breadcrumb__item">
+                            Adele
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <section>
+                <div class="container-fluid">
+                    <div class="row pt-4">
+                        <div class="col-12 mb-10">
+                            <form class="sort">
+                                <div class="sort__item sort__item_title">Сортировка:</div>
+                                <div class="sort__item">
+                                    <input type="radio" id="cost" value="cost" name="sort" data-sort="asc">
+                                    <label for="cost">по стоимости<span></span>
+                                    </label>
+                                </div>
+                                <div class="sort__item">
+                                    <input type="radio" id="popularity" value="popularity" name="sort" data-sort="asc">
+                                    <label for="popularity">по популярности<span></span>
+                                    </label>
+                                </div>
+                                <div class="sort__item">
+                                    <input type="radio" id="date" value="date" name="sort" data-sort="asc">
+                                    <label for="date">по дате добавления<span></span>
+                                    </label>
+                                </div>
+                            </form>
+                            <div class="filter">
+                                <div class="filter-item">
+                                    <button class="filter-select-button" id="showCollection">
+                                        <p>Коллекции</p>
+                                    </button>
+                                </div>
+                                <div class="filter-item">
+                                    <select class="filter-select" multiple title="Цветовая гамма" data-selected-text-format="count" data-count-selected-text="Цветовая гамма ({0})">
+                                        <option>Цветовая1</option>
+                                        <option>Цветовая2</option>
+                                        <option>Цветовая3</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <select class="filter-select" multiple title="Ширина" data-selected-text-format="count" data-count-selected-text="Ширина ({0})">
+                                        <option>Ширина</option>
+                                        <option>Ширина</option>
+                                        <option>Ширина</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <select class="filter-select" multiple title="Раппорт" data-selected-text-format="count" data-count-selected-text="Раппорт ({0})">
+                                        <option>Раппорт</option>
+                                        <option>Раппорт</option>
+                                        <option>Раппорт</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <select class="filter-select" multiple title="Материал" data-selected-text-format="count" data-count-selected-text="Материал ({0})">
+                                        <option>Материал</option>
+                                        <option>Материал</option>
+                                        <option>Материал</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <select class="filter-select" multiple title="Тип обоев" data-selected-text-format="count" data-count-selected-text="Тип обоев ({0})">
+                                        <option>Тип обоев</option>
+                                        <option>Тип обоев</option>
+                                        <option>Тип обоев</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <select class="filter-select" multiple title="Тип рисунка" data-selected-text-format="count" data-count-selected-text="Тип рисунка ({0})">
+                                        <option>Тип рисунка</option>
+                                        <option>Тип рисунка</option>
+                                        <option>Тип рисунка</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <select class="filter-select" multiple title="Стиль" data-selected-text-format="count" data-count-selected-text="Стиль ({0})">
+                                        <option>Стиль</option>
+                                        <option>Стиль</option>
+                                        <option>Стиль</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <select class="filter-select" multiple title="Комната" data-selected-text-format="count" data-count-selected-text="Комната ({0})">
+                                        <option>Комната</option>
+                                        <option>Комната</option>
+                                        <option>Комната</option>
+                                    </select>
+                                </div>
+                                <div class="filter-item">
+                                    <select class="filter-select" multiple title="Страна производства" data-selected-text-format="count" data-count-selected-text="Страна производства ({0})">
+                                        <option>Страна производства</option>
+                                        <option>Страна производства</option>
+                                        <option>Страна производства</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-lg-2 d-lg-block mb-lg-3 off-canvas collection-hidden " id="collections">
+                            <button class="d-lg-none" id="closeCollection">
+                                <span>×</span>
+                            </button>
+                            <h4 class="pb-4">Все коллекции</h4>
+                            <ul class="menu">
+                                <li><a href="/product/all-collections/detail/?ID=616">Adele</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=569">Alexandria</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=594">Antonia</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=610">Apolonia Jaberg</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=603">Arezzo</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=555">Ariadna</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=25">Aura</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=604">Azzurra</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=570">Baby Boom</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=238">Bella</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=546">Bellagio</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=670">Benefit</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=674">Benefit 2</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=686">Benefit 3</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=712">Bolero</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=82">Brix Unlimited</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=696">Callisto</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=688">Carat</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=83">Cassiopeia</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=145">Ceramica</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=28">City</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=87">Countryside</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=709">Crispy</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=144">Crystal</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=143">Defender</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=580">Disney MARVEL STAR WARS</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=587">Elegance</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=91">Elysion</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=588">Emily-РОЗНИЧНЫЙ ПРОЕКТ</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=597">Emily-РОЗНИЧНЫЙ ПРОЕКТ.</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=605">Emily-РОЗНИЧНЫЙ ПРОЕКТ..</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=669">Emily-РОЗНИЧНЫЙ ПРОЕКТ...</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=687">Fashion for Walls </a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=711">Fashion for Walls New Designs 21</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=681">Fusion</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=139">Glory</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=97">Home Gallery</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=621">Hypnotic</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=599">Impression</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=684">Instawalls 2</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=680">Jacklin</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=615">Josepha</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=325">Kitchen Mix</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=592">Light</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=612">Light 2</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=18">Living Decor</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=545">Loft #1</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=134">Lotta 2</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=624">Magic Travel</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=101">Make Up 17</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=39">Melody</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=622">Millennium</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=41">Miranda</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=129">Mode Vlies</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=127">Mode Vlies Professional</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=562">Natural silence</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=685">NEOСHIC</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=678">Nicole</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=602">Olivia</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=571">One five</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=707">ONYX</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=575">Orient</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=579">Palermo</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=576">Peonia</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=556">Phantasy</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=45">Poesia</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=20">Primavera</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=104">Prime Time</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=47">Profi Deco</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=401">Profi Deco 3</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=577">Profi Deco 5</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=584">Profi Deco 6</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=710">Profi Deco 6123</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=593">Profi Deco 7</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=600">Profi Deco 8</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=613">Profi Deco 9</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=618">Profi Deco10</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=672">Profi Deco11</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=682">Profi Deco12</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=572">Serenada</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=121">Shiny 2</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=614">Siena</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=23">Sorento</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=697">Spotlight </a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=582">Spring Collection</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=54">Symphonie</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=671">Talia</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=595">Trend</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=601">Trend 2</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=623">Trend 3</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=55">Tweed</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=550">Vacation</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=24">Victoria</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=111">Vie En Rose</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=573">Vintage</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=574">Violetta</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=596">Waves</a>
+                                </li>
+                                <li><a href="/product/all-collections/detail/?ID=609">Wild Mix</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 mb-3 pl-lg-5">
+                            <div class="row card-list">
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card15.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-10</h4></a>
+                                                    <p class="card__art">Артикул: 6166-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card16.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-11</h4></a>
+                                                    <p class="card__art">Артикул: 3633-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart btn-heart-active" data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелиновые обои</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card17.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-12</h4></a>
+                                                    <p class="card__art">Артикул: 12002-08</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card18.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-10</h4></a>
+                                                    <p class="card__art">Артикул: 6166-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart btn-heart-active" data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card19.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-11</h4></a>
+                                                    <p class="card__art">Артикул: 3633-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card20.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-12</h4></a>
+                                                    <p class="card__art">Артикул: 12002-08</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card21.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-10</h4></a>
+                                                    <p class="card__art">Артикул: 6166-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card22.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-11</h4></a>
+                                                    <p class="card__art">Артикул: 3633-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart btn-heart-active" data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card23.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-12</h4></a>
+                                                    <p class="card__art">Артикул: 12002-08</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card24.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-10</h4></a>
+                                                    <p class="card__art">Артикул: 6166-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card25.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-11</h4></a>
+                                                    <p class="card__art">Артикул: 3633-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card26.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-12</h4></a>
+                                                    <p class="card__art">Артикул: 12002-08</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart btn-heart-active" data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card27.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-10</h4></a>
+                                                    <p class="card__art">Артикул: 6166-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card28.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-11</h4></a>
+                                                    <p class="card__art">Артикул: 3633-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card29.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-12</h4></a>
+                                                    <p class="card__art">Артикул: 12002-08</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card30.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-10</h4></a>
+                                                    <p class="card__art">Артикул: 6166-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card31.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-11</h4></a>
+                                                    <p class="card__art">Артикул: 3633-4</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-list_item col-xxl-4 col-sm-6">
+                                    <div class="card card_white card_cat">
+                                        <a href="item.html" class="card__img" style="background-image: url('static/img/content/card/card32.jpg')"></a>
+                                        <div class="card__caption">
+                                            <div class="row justify-content-between flex-nowrap">
+                                                <div class="col-auto">
+                                                    <a href="#"><h4 class="text-uppercase">Adele | 3434-12</h4></a>
+                                                    <p class="card__art">Артикул: 12002-08</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="cart.html" class="btn-icon btn-heart " data-toggle="tooltip" data-placement="bottom" title="Добавить в избранное"></a>
+                                                </div>
+                                            </div>
+                                            <div class="card-properties">
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Ширина</p>
+                                                        <p class="font-weight-bold">1,06м</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Материал</p>
+                                                        <p class="font-weight-bold">флизелин</p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-properties__item">
+                                                    <div class="card-properties__body">
+                                                        <p>Производство</p>
+                                                        <p class="font-weight-bold">Россия</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row card__bottom">
+                                                <div class="col-auto mb-2">
+                                                    <div class="card__price"><span>1290</span> ₽</div>
+                                                </div>
+                                                <div class="col-auto mb-2">
+                                                    <a href="#" class="cart__add"><span>Добавить в корзину</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="page__footer mt-14">
+            <div class="container-fluid">
+                <div class="footer">
+                    <div class="row footer-row">
+                        <div class="col-lg-3 col-md-6 col-sm-5 col-xs-6">
+                            <h4 class="mb-3">Каталог</h4>
+                            <ul class="menu">
+                                <li><a href="#" class="menu__link">Подбор обоев</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Все коллекции</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Новинки</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Типы обоев</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Интерьерные решения</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Виртуальная комната</a>
+                                </li>
+                            </ul>
+                            <a href="#" class="mb-3"><h4>Акции</h4></a>
+                            <a href="#" class="mb-3"><h4>Распродажа</h4></a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-7 col-xs-6">
+                            <h4 class="mb-3">Покупателю</h4>
+                            <ul class="menu">
+                                <li><a href="#" class="menu__link">Оплата</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Доставка</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Возврат</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Фирменные магазины</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Сертификаты</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Советы по поклейке обоев</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Маркировка обоев и ее значение</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Расчет необходимого количества рулонов</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-5 col-xs-6">
+                            <h4 class="mb-3">Компания</h4>
+                            <ul class="menu">
+                                <li><a href="#" class="menu__link">О компании</a>
+                                </li>
+                                <li><a href="#" class="menu__link">История Erismann</a>
+                                </li>
+                                <li><a href="#" class="menu__link">События</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Вакансии</a>
+                                </li>
+                                <li><a href="contacts.html" class="menu__link">Контакты</a>
+                                </li>
+                                <li><a href="#" class="menu__link">Обратная связь</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-7 menu__last mt-3 mt-sm-0">
+                            <form class="input-group search mx-0 mb-3">
+                                <input type="text" class="form-control" placeholder="Поиск по каталогу" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-search" type="submit" id="button-addon2"></button>
+                                </div>
+                            </form>
+                            <div class="social">
+                                <a href="#" class="btn-icon btn-facebook"></a>
+                                <a href="#" class="btn-icon btn-instagram"></a>
+                                <a href="#" class="btn-icon btn-vk"></a>
+                                <a href="#" class="btn-icon btn-youtube"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="d-flex align-items-center flex-wrap">
+                        <span class="mr-8 mb-1"> © 2020 Erismann</span>
+                        <a href="#" class="mb-1">Политика конфиденциальности</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </footer>
+
+
+
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="static/js/main.min.js"></script>
+
+    </body>
+
+</html>
