@@ -10028,16 +10028,18 @@ $(function () {
     });
 })();
 
-document.querySelector('#showCollection').addEventListener('click', () => {
+if ($('#showCollection').length) {
+  document.querySelector('#showCollection').addEventListener('click', () => {
     document.querySelector('#collections').classList.remove('collection-hidden')
     document.querySelector('.page').classList.add('body-cover')
-})
-document.querySelector('#closeCollection').addEventListener('click', () => {
+  })}
+if ($('#closeCollection').length) {
+  document.querySelector('#closeCollection').addEventListener('click', () => {
     document.querySelector('#collections').classList.add('collection-hidden')
     document.querySelector('.page').classList.remove('body-cover')
 
-})
-
+  })
+}
 
 
 
