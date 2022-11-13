@@ -10145,17 +10145,20 @@ jQuery(function($){
         }
     });
 });
-
+if ($('#catalogSearch').length) {
 document.querySelector('#catalogSearch').addEventListener('focus', ()=> {
     if (window.screen.width < 768 ) {
         document.querySelector('#flexInput').classList.add('wide-input')
     }
 })
+}
+if ($('#catalogSearch').length) {
 document.querySelector('#catalogSearch').addEventListener('blur', ()=> {
     if (window.screen.width < 768 ) {
         document.querySelector('#flexInput').classList.remove('wide-input')
     }
 })
+}
 
 
 
